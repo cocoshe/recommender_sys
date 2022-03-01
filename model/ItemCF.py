@@ -34,7 +34,7 @@ class ItemCF:
                 for item2 in items:
                     if item == item2:
                         continue
-                    c[item][item2] += 1
+                    c[item][item2] += 1  # / math.log(1 + len(items) * 1.0)   # 加入惩罚
 
         w = dict()
         for i, related_items in c.items():
