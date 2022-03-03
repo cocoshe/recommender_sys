@@ -1,8 +1,5 @@
 import math
-import random
-
 import numpy as np
-
 
 class LFM:
     def __init__(self):
@@ -70,9 +67,9 @@ class LFM:
         users_pool = set(users_pool)
         items_pool = set(items_pool)
         for user in users_pool:
-            P[user] = np.random.randn(F)
+            P[user] = np.random.rand(F)
         for item in items_pool:
-            Q[item] = np.random.randn(F)
+            Q[item] = np.random.rand(F)
         return P, Q
 
     def Recommend(self, user, P, Q):
